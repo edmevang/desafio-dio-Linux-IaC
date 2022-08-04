@@ -1,0 +1,62 @@
+#!/bin/bash
+
+echo "Lendo o conteúdo da pasta raiz / ..."
+cd  /
+ls
+
+#Excluindo diretórios
+echo "Começando a faxina ..."
+echo "Excluindo diretórios ..."
+
+rm -Rf /publica/
+rm -Rf /Mariana/
+rm -Rf /Textos/
+
+rm -Rf /adm/
+rm -Rf /ven/
+rm -Rf /sec/
+rm -Rf /publico/
+
+
+
+echo "Excluindo usuários ..."
+#cat /etc/passwd
+userdel -r carlos
+userdel -r maria
+userdel -r joao
+userdel -r debora
+userdel -r sebastiana
+userdel -r roberto
+userdel -r josefina
+userdel -r amanda
+userdel -r rogerio
+
+userdel -r maisa
+userdel -r daniel
+userdel -r rodrigo
+userdel -r mariana
+
+userdel -r guest
+userdel -r guest1
+userdel -r guest2
+userdel -r guest3
+userdel -r guest10
+userdel -r guest11
+userdel -r guest12
+userdel -r guest13
+
+userdel -r convidado1
+
+
+echo "Excluindo grupos..."
+#cat /etc/group
+groupdel GRP_ADM
+groupdel GRP_VEN
+groupdel GRP_SEC
+
+
+echo "Excluindo alguns scripts..."
+cd  /scripts/
+rm date.sh
+
+echo "Limpeza Completa..."
